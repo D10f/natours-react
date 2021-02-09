@@ -7,14 +7,31 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px; 10 / 16 = 62.5%
+
+  @include responsive(tablet-land)  { font-size: 56.25%; } // 1rem = 9px
+  @include responsive(tablet-port)  { font-size: 50%;    } // 1rem = 8px
+  @include responsive(big-desktop)  { font-size: 75%;    } // 1rem = 12px
 }
 
+/* Fonts are inherited by default. By setting the font-family at the body which
+is the parent element for all other elements, is more efficient and shorter.
+*/
 body {
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.7;
+  padding: 2rem;
+  color: $color-dark-gray;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  @include responsive(tablet-port) {
+    padding: 0;
+  }
+}
+
+ul {
+  list-style: none;
 }

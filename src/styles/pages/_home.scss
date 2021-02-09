@@ -1,1 +1,99 @@
-/* styles specific to the a certain page and are not reusable */
+.section-about {
+  background-color: $color-light-gray;
+  padding: 15rem 0;
+  margin-top: -15vh;
+
+  @include responsive(tablet-port){
+    padding: 20rem 2rem 50rem 2rem;
+  }
+
+  @include responsive(phone){
+    padding: 15rem 2rem 10rem 2rem;
+  }
+}
+
+.section-features {
+  padding: 15rem 0;
+  background-image:
+    linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+    url(../assets/img/nat-4.jpg);
+  background-size: cover;
+  margin-top: -6rem;
+
+  // Alternative to use clip-path to create the non-rectangular background
+  transform: skewY(-5deg);
+  & > * {
+    transform: skewY(5deg);
+  }
+
+  @include responsive(phone){
+    padding: 15rem 2rem;
+  }
+}
+
+.section-tours {
+  background-color: $color-light-gray;
+  padding: 15rem 0 20rem 0;
+  margin-top: -6rem;
+
+  @include responsive(phone) {
+    padding: 15rem 2rem 20rem 2rem;
+  }
+}
+
+.section-stories {
+  position: relative;
+  padding: 10rem 0 15rem 0;
+
+  @include responsive(phone){
+    padding: 10rem 2rem 15rem 2rem;
+  }
+}
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+  @include responsive(tablet-port) {
+    padding: 15rem 2rem;
+  }
+
+  @include responsive(phone) {
+    padding: 10rem 0;
+  }
+}
+
+.contact-form {
+  background-image:
+    linear-gradient(105deg,
+      rgba($color-white, 0.9) 50%, transparent 50%),
+      url(../assets/img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 3rem rgba($color-black, .25);;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5rem;
+  width: 100%;
+  height: 50rem;
+
+  @include responsive(tablet-port) {
+    background-image:
+      linear-gradient(105deg,
+        rgba($color-white, 0.9) 75%, transparent 75%),
+        url(../assets/img/nat-10.jpg);
+  }
+
+  @include responsive(phone) {
+    padding: 2rem;;
+    justify-content: center;
+    align-items: center;
+    background-image:
+      linear-gradient(105deg,
+        rgba($color-white, 0.9) 100%, transparent 100%),
+        url(../assets/img/nat-10.jpg);
+  }
+}
