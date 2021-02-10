@@ -1,11 +1,14 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
 .form {
   width: 40%;
 
-  @include responsive(tablet-port) {
+  @include mixins.responsive(tablet-port) {
     width: 75%;
   }
 
-  @include responsive(phone) {
+  @include mixins.responsive(phone) {
     width: 100%;
   }
 
@@ -18,11 +21,11 @@
       justify-content: space-between;
     }
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       justify-content: space-around;
     }
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       margin: 1rem 0;
     }
   }
@@ -56,18 +59,18 @@
     display: block;
     border-radius: 3px;
     border: none;
-    background-color: rgba($color-white, 0.8);
+    background-color: rgba(variables.$color-white, 0.8);
     border-bottom: 3px solid transparent;
     outline: none;
     transition: all 0.2s ease-out;
 
     &:focus, &:active {
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.25);
-      border-bottom: 3px solid $color-primary-light;
+      box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.25);
+      border-bottom: 3px solid variables.$color-primary-light;
     }
 
     &:focus:invalid {
-      border-bottom: 3px solid $color-secondary-dark;
+      border-bottom: 3px solid variables.$color-secondary-dark;
     }
 
     &:not(:focus):invalid {
@@ -75,7 +78,7 @@
     }
 
     &::placeholder {
-      color: $color-dark-gray;
+      color: variables.$color-dark-gray;
     }
 
     &--radio {
@@ -91,7 +94,7 @@
     width: 3rem;
     height: 3rem;
     display: inline-block;
-    border: 5px solid $color-primary-light;
+    border: 5px solid variables.$color-primary-light;
     border-radius: 50%;
     position: relative;
     top: 0.7rem;
@@ -105,7 +108,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: $color-primary-light;
+      background-color: variables.$color-primary-light;
       border-radius: 50%;
       display: block;
       opacity: 0;

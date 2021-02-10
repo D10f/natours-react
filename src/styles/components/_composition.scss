@@ -1,8 +1,11 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
 .composition {
   position: relative;
   width: 100%;
 
-  @include responsive(phone) {
+  @include mixins.responsive(phone) {
     position: static;
     display: flex;
     gap: 2rem;
@@ -13,17 +16,17 @@
 
   &__photo {
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.4);
     border-radius: 2px;
     position: absolute;
     z-index: 10;
     transition: transform 0.2s ease-out;
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       width: 40%;
     }
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       position: static;
       width: 75%;
     }
@@ -32,7 +35,7 @@
       top: -2rem;
       left: 0;
 
-      @include responsive(tablet-port) {
+      @include mixins.responsive(tablet-port) {
         top: 4rem;
         left: 4rem;
       }
@@ -42,7 +45,7 @@
       top: 2rem;
       right: -1rem;
 
-      @include responsive(tablet-port) {
+      @include mixins.responsive(tablet-port) {
         top: 4rem;
         right: 4rem;
       }
@@ -52,17 +55,17 @@
       top: 12rem;
       left: 10rem;
 
-      @include responsive(tablet-port) {
+      @include mixins.responsive(tablet-port) {
         top: 15rem;
         left: 30%;
       }
     }
 
     &:hover {
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.4);
+      box-shadow: 0 2.5rem 4rem rgba(variables.$color-black, 0.4);
       z-index: 20;
       transform: scale(1.2);
-      outline: 0.75rem solid $color-primary-light;
+      outline: 0.75rem solid variables.$color-primary-light;
       outline-offset: 1rem;
     }
   }

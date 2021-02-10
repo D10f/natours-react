@@ -1,14 +1,17 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
 .story {
   width: 75%;
   margin: 0 auto;
-  box-shadow: $shadow;
-  background-color: rgba($color-white, 0.75); // opacity due to bg video
+  box-shadow: variables.$shadow;
+  background-color: rgba(variables.$color-white, 0.75); // opacity due to bg video
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
   transform: skewX(-10deg);
 
-  @include responsive(phone) {
+  @include mixins.responsive(phone) {
     width: 100%;
     transform: skewX(0);
   }
@@ -39,7 +42,7 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       transform: translateX(-3rem) skewX(0);
     }
   }
@@ -51,7 +54,7 @@
   }
 
   &__caption {
-    color: $color-white;
+    color: variables.$color-white;
     text-transform: uppercase;
     font-size: 1.8rem;
     text-align: center;
@@ -66,7 +69,7 @@
   &__header {
     transform: skewX(12deg);
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       transform: skewX(0);
     }
   }

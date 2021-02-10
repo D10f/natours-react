@@ -1,14 +1,17 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
 .btn {
   display: inline-block;
   padding: 1.5rem 3rem;
-  border-radius: 3rem;
+  border-radius: 3px;
   border: none;
   font-family: inherit;
   text-transform: uppercase;
   text-decoration: none;
   transition: all .2s;
   position: relative;
-  @include margin-top(2rem);
+  @include mixins.margin-top(2rem);
 
   &:hover {
     transform: translateY(-.3rem);
@@ -40,21 +43,25 @@
     opacity: 0;
   }
 
+  &--rounded {
+    border-radius: 3rem;
+  }
+
   &--white {
-    background-color: $color-white;
+    background-color: variables.$color-white;
     color: #333;
   }
 
   &--green {
-    background-color: $color-primary-dark;
-    color: $color-white;
+    background-color: variables.$color-primary-dark;
+    color: variables.$color-white;
   }
 
   &--white::after {
-    background-color: $color-white;
+    background-color: variables.$color-white;
   }
   &--green::after {
-    background-color: $color-primary-dark;
+    background-color: variables.$color-primary-dark;
   }
 
   &--animated {
@@ -67,18 +74,18 @@
   &:link,
   &:visited {
     font-size: 1.4rem;
-    color: $color-primary;
+    color: variables.$color-primary;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px solid variables.$color-primary;
     padding: 3px;
     position: relative;
     transition: transform 0.2s;
   }
 
   &:hover {
-    background-color: $color-primary-dark;
-    color: $color-light-gray;
+    background-color: variables.$color-primary-dark;
+    color: variables.$color-light-gray;
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   }

@@ -1,14 +1,17 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
 .header {
   height: 95vh;
   position: relative;
   background-image:
-    linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+    linear-gradient(to right bottom, rgba(variables.$color-primary-light, .8), rgba(variables.$color-primary-dark, .8)),
     url(../assets/img/hero.jpg);
   background-size: cover;     /* matches the width of the viewport */
   background-position: top;   /* on resize it preserves the top of the image uncropped*/
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 
-  @include responsive(phone) {
+  @include mixins.responsive(phone) {
     height: 80vh;
     clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 90%);
   }

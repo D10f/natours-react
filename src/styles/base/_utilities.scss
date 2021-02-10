@@ -1,6 +1,9 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
 .has-background {
   /* Achieve linear gradient color on the text */
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  background-image: linear-gradient(to right, variables.$color-primary-light, variables.$color-primary-dark);
   background-clip: text;
   color: transparent;
 }
@@ -24,7 +27,7 @@
   padding: 0 !important;
 }
 .paddingless-on-tablet {
-  @include responsive(tablet-port){
+  @include mixins.responsive(tablet-port){
     padding: 0 !important;
   }
 }
@@ -32,50 +35,50 @@
   width: 100%;
 }
 .large-margin-top {
-  @include margin-top(7.5rem);
+  @include mixins.margin-top(7.5rem);
 }
 .medium-margin-top {
-  @include margin-top(5rem);
+  @include mixins.margin-top(5rem);
 }
 .small-margin-top {
-  @include margin-top(2rem);
+  @include mixins.margin-top(2rem);
 }
 
 .large-padding-top {
-  @include padding-top(7.5rem);
+  @include mixins.padding-top(7.5rem);
 }
 .medium-padding-top {
-  @include padding-top(5rem);
+  @include mixins.padding-top(5rem);
 }
 .small-padding-top {
-  @include padding-top(2rem);
+  @include mixins.padding-top(2rem);
 }
 
 .large-margin-bottom {
-  @include margin-bottom(7.5rem);
+  @include mixins.margin-bottom(7.5rem);
 }
 .medium-margin-bottom {
-  @include margin-bottom(5rem);
+  @include mixins.margin-bottom(5rem);
 }
 .small-margin-bottom {
-  @include margin-bottom(2rem);
-  @include responsive(phone) {
+  @include mixins.margin-bottom(2rem);
+  @include mixins.responsive(phone) {
     margin-bottom: 0.5rem;
   }
 }
 
 .large-padding-bottom {
-  @include padding-bottom(7.5rem);
+  @include mixins.padding-bottom(7.5rem);
 }
 .medium-padding-bottom {
-  @include padding-bottom(5rem);
+  @include mixins.padding-bottom(5rem);
 }
 .small-padding-bottom {
-  @include padding-bottom(2rem);
+  @include mixins.padding-bottom(2rem);
 }
 .small-padding {
-  @include padding(2rem);
+  @include mixins.padding(2rem);
 }
 .small-padding-left {
-  @include padding-left(2rem);
+  @include mixins.padding-left(2rem);
 }

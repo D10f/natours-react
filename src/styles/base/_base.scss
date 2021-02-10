@@ -1,3 +1,6 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
 *,
 *::before,
 *::after {
@@ -9,9 +12,9 @@
 html {
   font-size: 62.5%; // 1rem = 10px; 10 / 16 = 62.5%
 
-  @include responsive(tablet-land)  { font-size: 56.25%; } // 1rem = 9px
-  @include responsive(tablet-port)  { font-size: 50%;    } // 1rem = 8px
-  @include responsive(big-desktop)  { font-size: 75%;    } // 1rem = 12px
+  @include mixins.responsive(tablet-land)  { font-size: 56.25%; } // 1rem = 9px
+  @include mixins.responsive(tablet-port)  { font-size: 50%;    } // 1rem = 8px
+  @include mixins.responsive(big-desktop)  { font-size: 75%;    } // 1rem = 12px
 }
 
 /* Fonts are inherited by default. By setting the font-family at the body which
@@ -23,11 +26,11 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   padding: 2rem;
-  color: $color-dark-gray;
+  color: variables.$color-dark-gray;
   box-sizing: border-box;
   scroll-behavior: smooth;
 
-  @include responsive(tablet-port) {
+  @include mixins.responsive(tablet-port) {
     padding: 0;
   }
 }

@@ -1,3 +1,6 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
 .modal {
   position: fixed;
   height: 100vh;
@@ -20,20 +23,20 @@
   }
 
   &__content {
-    @include absolute-center;
+    @include mixins.absolute-center;
     width: 75%;
     height: 50rem;
-    background: $color-white;
+    background: variables.$color-white;
     transition: transform .2s .3s;
     transform: translate(-50%, -50%) scale(0);
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       // max-height: min-content;
       width: 90%;
       min-height: 50%;
     }
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       padding: 1rem 0;
     }
   }
@@ -49,7 +52,7 @@
   }
 
   &__close {
-    color: $color-dark-gray;
+    color: variables.$color-dark-gray;
     position: absolute;
     top: 1rem;
     right: 3rem;
@@ -58,7 +61,7 @@
     text-decoration: none;
 
     &:hover {
-      color: $color-primary-dark;
+      color: variables.$color-primary-dark;
     }
   }
 }

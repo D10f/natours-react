@@ -7,9 +7,6 @@
  *  | Tablet-land    | < 1200 | 75    |
  *  | Desktop        | < 1800 | 112.5 |
  *  | Big Desktop    | > 1800 | 112.5 |
- *
- *  APPLY CHANGES IN ORDER
- *  base > typography > layout > components
 **/
 
 @mixin responsive($breakpoint) {

@@ -1,5 +1,8 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
 .primary-headline {
-  color: $color-white;
+  color: variables.$color-white;
   text-transform: uppercase;
   position: absolute;
   top: 40%;
@@ -16,7 +19,7 @@
     display: inline-block;
     animation: moveInLeft 1s ease-out;
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       letter-spacing: 1rem;
       font-size: 3rem;
     }
@@ -28,7 +31,7 @@
     letter-spacing: 1.4rem;
     animation: moveInRight 1s ease-out;
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       letter-spacing: .4rem;
     }
   }
@@ -50,12 +53,12 @@
       text-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.2);
     }
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       // letter-spacing: 0;
       font-size: 2.4rem;
     }
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       letter-spacing: 0;
       font-size: 2.1rem;
     }
@@ -74,10 +77,10 @@
   &--wrap {
     column-count: 2;
     column-gap: 2rem;
-    column-rule: 1px solid $color-gray;
+    column-rule: 1px solid variables.$color-gray;
     hyphens: auto;
 
-    @include responsive(phone) {
+    @include mixins.responsive(phone) {
       column-count: 1;
       column-gap: 0;
       padding-right: 2rem;
@@ -86,6 +89,6 @@
   }
 
   &:not(:last-child) {
-    @include margin-bottom(2.5rem);
+    @include mixins.margin-bottom(2.5rem);
   }
 }

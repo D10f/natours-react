@@ -1,3 +1,6 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
 .card {
   -moz-perspective: 150rem;
   perspective: 150rem;
@@ -7,14 +10,14 @@
   /* A fixed height is required since this element's height collapses and it
   causes issues with mouse hover */
 
-  @include responsive(tablet-port) {
+  @include mixins.responsive(tablet-port) {
     display: flex;
     flex-direction: column;
     width: 60%;
     height: auto;
   }
 
-  @include responsive(phone) {
+  @include mixins.responsive(phone) {
     width: 80%;
   }
 
@@ -29,9 +32,9 @@
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 3px;
-    box-shadow: $shadow;
+    box-shadow: variables.$shadow;
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       height: auto;
       position: relative;
       display: block;
@@ -40,9 +43,9 @@
     }
 
     &--front {
-      background-color: $color-light-gray;
+      background-color: variables.$color-light-gray;
 
-      @include responsive(tablet-port) {
+      @include mixins.responsive(tablet-port) {
         display: flex;
         flex-direction: column;
       }
@@ -54,32 +57,32 @@
       justify-content: center;
       align-items: center;
       transform: rotateY(180deg);
-      color: $color-white;
+      color: variables.$color-white;
 
-      @include responsive(tablet-port) {
+      @include mixins.responsive(tablet-port) {
         top: -5rem;
         padding: 5rem 0 3rem 0;
         transform: rotateY(0);
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       }
 
-      &-1 { background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark); }
-      &-2 { background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark); }
-      &-3 { background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark); }
+      &-1 { background-image: linear-gradient(to right bottom, variables.$color-secondary-light, variables.$color-secondary-dark); }
+      &-2 { background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark); }
+      &-3 { background-image: linear-gradient(to right bottom, variables.$color-tertiary-light, variables.$color-tertiary-dark); }
     }
   }
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
 
-    @include responsive(tablet-port){
+    @include mixins.responsive(tablet-port){
       transform: rotateY(0);
     }
   }
   &:hover &__side--back {
     transform: rotateY(0);
 
-    @include responsive(tablet-port){
+    @include mixins.responsive(tablet-port){
       transform: rotateY(0);
     }
   }
@@ -101,31 +104,31 @@
       font-size: 2.5rem;
       font-weight: 300;
       text-transform: uppercase;
-      color: $color-white;
+      color: variables.$color-white;
       box-decoration-break: clone;
       padding: 1rem 0.5rem;
 
       &-1 {
         background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary-light, 0.75),
-        rgba($color-secondary-dark, 0.75)
+        rgba(variables.$color-secondary-light, 0.75),
+        rgba(variables.$color-secondary-dark, 0.75)
         );
       }
 
       &-2 {
         background-image: linear-gradient(
         to right bottom,
-        rgba($color-primary-light, 0.75),
-        rgba($color-primary-dark, 0.75)
+        rgba(variables.$color-primary-light, 0.75),
+        rgba(variables.$color-primary-dark, 0.75)
         );
       }
 
       &-3 {
         background-image: linear-gradient(
         to right bottom,
-        rgba($color-tertiary-light, 0.75),
-        rgba($color-tertiary-dark, 0.75)
+        rgba(variables.$color-tertiary-light, 0.75),
+        rgba(variables.$color-tertiary-dark, 0.75)
         );
       }
     }
@@ -138,25 +141,25 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       height: 20rem;
     }
 
     &--1 {
       background-image:
-        linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+        linear-gradient(to right bottom, variables.$color-secondary-light, variables.$color-secondary-dark),
         url(../assets/img/nat-5.jpg);
     }
 
     &--2 {
       background-image:
-        linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+        linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark),
         url(../assets/img/nat-6.jpg);
     }
 
     &--3 {
       background-image:
-        linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+        linear-gradient(to right bottom, variables.$color-tertiary-light, variables.$color-tertiary-dark),
         url(../assets/img/nat-7.jpg);
     }
   }
@@ -166,7 +169,7 @@
     width: 80%;
     margin: 0 auto;
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       padding: 5rem 0;
     }
   }
@@ -177,14 +180,14 @@
     padding: 0.5rem;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $color-gray;
+      border-bottom: 1px solid variables.$color-gray;
     }
   }
 
   /* BACK OF THE CARD */
 
   &__cta {
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       width: 100%;
       text-align: center;
     }
@@ -201,7 +204,7 @@
     font-family: sans-serif;
     font-weight: 100;
 
-    @include responsive(tablet-port) {
+    @include mixins.responsive(tablet-port) {
       font-size: 4rem;
     }
   }

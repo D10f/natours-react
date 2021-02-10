@@ -1,14 +1,17 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
 .feature {
   height: 100%;
-  background-color: rgba($color-white, 0.8);
+  background-color: rgba(variables.$color-white, 0.8);
   font-size: 1.5rem;
   padding: 2rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: $shadow;
+  box-shadow: variables.$shadow;
   transition: transform 0.2s ease-in-out;
 
-  @include responsive(tablet-port) {
+  @include mixins.responsive(tablet-port) {
     width: 75%;
   }
 
