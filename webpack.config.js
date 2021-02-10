@@ -83,5 +83,10 @@ module.exports = {
     hot: true,
     // host: '0.0.0.0',
     // https: true
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   }
 };
