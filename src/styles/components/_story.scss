@@ -49,7 +49,8 @@
 
   &__thumbnail {
     height: 100%;
-    transform: translateX(-3rem) scale(1.2);
+    // transform: translateX(-3rem) scale(1.2);
+    transform: scale(1.2);
     transition: transform 0.4s ease;
   }
 
@@ -81,7 +82,8 @@
   }
 
   &:hover &__thumbnail {
-    transform: translateX(-3rem) scale(1);
+    // transform: translateX(-3rem) scale(1);
+    transform: scale(1);
     filter: blur(2px) brightness(80%);
   }
 }

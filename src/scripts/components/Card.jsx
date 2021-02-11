@@ -1,4 +1,9 @@
+import { useContext } from 'react';
+import UserContext from '../context/userContext';
+
 const Card = ({ details, idx }) => {
+
+  const { openModal } = useContext(UserContext);
 
   const {
     title,
@@ -34,7 +39,7 @@ const Card = ({ details, idx }) => {
         <header className="card__cta">
           <p className="card__only">Only</p>
           <p className="card__price">{`$${price / 100}`}</p>
-          <button className="btn btn--rounded btn--white">Book now!</button>
+          <button className="btn btn--rounded btn--white" onClick={openModal}>Book now!</button>
         </header>
       </div>
     </article>

@@ -10,6 +10,7 @@
 **/
 
 @mixin responsive($breakpoint) {
+  @if $breakpoint == narrow       { @media (max-width: 35em)    { @content }; }
   @if $breakpoint == phone        { @media (max-width: 37.5em)  { @content }; }
   @if $breakpoint == tablet-port  { @media (max-width: 56.25em) { @content }; }
   @if $breakpoint == tablet-land  { @media (max-width: 75em)    { @content }; }

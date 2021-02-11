@@ -13,12 +13,14 @@
   opacity: 0;
   visibility: hidden;
 
-  &:target {
+  &:target,
+  &--open {
     opacity: 1;
     visibility: visible;
   }
 
-  &:target &__content {
+  &:target &__content,
+  &--open &__content {
     transform: translate(-50%, -50%) scale(1);
   }
 
@@ -43,12 +45,14 @@
 
   &__image-box {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__image {
-    width: 100%;
+    // width: 100%;
+    // object-fit: cover;
     height: 100%;
-    object-fit: cover;
   }
 
   &__close {

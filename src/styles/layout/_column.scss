@@ -16,8 +16,10 @@
 
   @include mixins.responsive(tablet-port) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: variables.$max-width-tablet-port;
-    padding: 1rem 2rem;;
+    padding: 1rem 2rem;
   }
 
   &--horizontal {
