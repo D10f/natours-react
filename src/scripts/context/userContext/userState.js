@@ -3,18 +3,6 @@ import UserContext from './userContext'
 import UserReducer from './userReducer'
 import { GET_USERS, OPEN_MODAL, CLOSE_MODAL } from '../types'
 
-// Setting up environment variables for production in Netlify
-// let gitHubClientId
-// let gitHubClientSecret
-//
-// if(process.env.NODE_ENV !== 'production'){
-//   gitHubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID
-//   gitHubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET
-// } else {
-//   gitHubClientId = process.env.GITHUB_CLIENT_ID
-//   gitHubClientSecret = process.env.GITHUB_CLIENT_SECRET
-// }
-
 const UserState = ({ stories, children }) => {
 
   const initialState = {

@@ -49,7 +49,7 @@
     transition: transform 0.2s ease;
 
     &:hover {
-      transform: skewY(2deg) skewX(-15deg) scale(1.1);
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
       text-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.2);
     }
 
