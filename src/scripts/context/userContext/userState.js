@@ -1,7 +1,7 @@
 import { useReducer } from 'react'
 import UserContext from './userContext'
 import UserReducer from './userReducer'
-import { GET_USERS, OPEN_MODAL, CLOSE_MODAL } from './types'
+import { GET_USERS, OPEN_MODAL, CLOSE_MODAL } from '../types'
 
 // Setting up environment variables for production in Netlify
 // let gitHubClientId

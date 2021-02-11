@@ -3,7 +3,7 @@ import { useEffect, useContext } from 'react';
 import SectionHeader from '../components/SectionHeader';
 import Story from '../components/Story';
 import BgVideo from '../components/BgVideo';
-import UserContext from '../context/userContext';
+import UserContext from '../context/userContext/userContext';
 
 const Stories = ({ stories }) => {
 

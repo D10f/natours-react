@@ -7,7 +7,8 @@ import Stories    from './scripts/sections/Stories';
 import Contact    from './scripts/sections/Contact';
 import Footer     from './scripts/sections/Footer';
 import Modal      from './scripts/components/Modal';
-import UserState  from './scripts/context/userState'
+import Nav        from './scripts/components/Nav';
+import UserState  from './scripts/context/userContext/userState'
 
 import './styles.scss';
 
@@ -26,6 +27,7 @@ const storiesData = [
 const App = () => {
   return (
     <UserState stories={storiesData.length}>
+      <Nav />
       <Header />
       <About />
       <Features />

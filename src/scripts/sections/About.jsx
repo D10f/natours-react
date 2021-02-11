@@ -32,7 +32,7 @@ const About = () => {
           <a className="btn-text" href="#">Learn More &rarr;</a>
         </article>
 
-        <aside className="column">
+        <aside className="column column--stretch">
           <div className="composition">
             {
               Object.values(images).map((img, idx) => (

@@ -41,6 +41,10 @@
       }
     }
 
+    &--stretch {
+      width: 100%;
+    }
+
     &--left {
       justify-content: center;
       align-items: flex-start;

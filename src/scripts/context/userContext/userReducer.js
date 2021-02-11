@@ -1,4 +1,4 @@
-import { GET_USERS, OPEN_MODAL, CLOSE_MODAL } from './types'
+import { GET_USERS, OPEN_MODAL, CLOSE_MODAL } from '../types'
 
 export default (state, action) => {
   switch(action.type){

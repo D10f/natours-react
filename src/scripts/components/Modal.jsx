@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Button from './Button';
-import UserContext from '../context/userContext';
+import UserContext from '../context/userContext/userContext';
 
 const Modal = () => {
 

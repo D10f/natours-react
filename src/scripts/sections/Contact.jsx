@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section className="section-contact">
       <div className="row">
-        <div className="column">
+        <div className="column column--stretch">
           <article className="contact-form">
             <SectionHeader sectionTitle={sectionTitle} />
             <ContactForm />
