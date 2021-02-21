@@ -29,6 +29,7 @@
     width: 75%;
     height: min-content;
     min-height: 50%;
+    max-height: 75%;
     background: variables.$color-white;
     transition: transform .2s .3s;
     transform: translate(-50%, -50%) scale(0);
